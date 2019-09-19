@@ -1,0 +1,62 @@
+set mainfont {{Fira Sans} 11}
+set textfont {{Fira Mono} 10}
+set uifont {{Fira Sans} 9}
+set tabstop 4
+set findmergefiles 0
+set maxgraphpct 100
+set maxwidth 32
+set cmitmode patch
+set wrapcomment none
+set autoselect 1
+set autosellen 40
+set showneartags 1
+set maxrefs 20
+set visiblerefs {"master"}
+set hideremotes 0
+set showlocalchanges 1
+set datetimeformat {%Y-%m-%d %H:%M:%S}
+set limitdiffs 1
+set uicolor #49483e
+set want_ttk 1
+set bgcolor #272822
+set fgcolor #f8f8f2
+set uifgcolor #f8f8f2
+set uifgdisabledcolor #6272a4
+set colors {#a6e22e #f92672 #ae81ff #fd971f #f8f8f8 #f4bf75 #f4bf75}
+set diffcolors {#f92672 #a6e22e #ae81ff}
+set mergecolors {#f92672 #ae81ff #a6e22e #ae81ff #f4bf75 #8be9fd #fd971f #75715e #8be9fd #fd971f #8be9fd #f4bf75 #8be9fd #a6e22e #f4bf75 #fd971f}
+set markbgcolor #272822
+set diffcontext 3
+set selectbgcolor #49483e
+set foundbgcolor #75715e
+set currentsearchhitbgcolor #f4bf75
+set extdifftool meld
+set perfile_attrs 0
+set headbgcolor #a6e22e
+set headfgcolor black
+set headoutlinecolor #f8f8f2
+set remotebgcolor #f4bf75
+set tagbgcolor #75715e
+set tagfgcolor black
+set tagoutlinecolor #f8f8f2
+set reflinecolor #f8f8f2
+set filesepbgcolor #49483e
+set filesepfgcolor #f8f8f2
+set linehoverbgcolor #75715e
+set linehoverfgcolor black
+set linehoveroutlinecolor #f8f8f2
+set mainheadcirclecolor #a1efe4
+set workingfilescirclecolor #f92672
+set indexcirclecolor #a6e22e
+set circlecolors {#272822 #66d9ef #49483e #66d9ef #66d9ef}
+set linkfgcolor #ae81ff
+set circleoutlinecolor #49483e
+set geometry(main) 1920x997+0+24
+set geometry(state) zoomed
+set geometry(topwidth) 1920
+set geometry(topheight) 700
+set geometry(pwsash0) "859 1"
+set geometry(pwsash1) "1267 1"
+set geometry(botwidth) 1902
+set geometry(botheight) 292
+set permviews {}

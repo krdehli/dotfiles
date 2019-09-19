@@ -1,0 +1,20 @@
+{
+    "languageserver": {
+		"ccls": {
+			"command": "ccls",
+			"filetypes": ["c", "cpp", "objc", "objcpp"],
+			"rootPatterns": [".ccls", ".vim/", ".git/", ".hg/", "CMakeSettings.json"],
+			"initializationOptions": {
+				"cache": {
+					"directory": "~/Appdata/Local/Temp/ccls"
+				},
+				"compilationDatabaseDirectory": "out/build/x64-Debug",
+				"highlight": { 
+					"lsRanges" : true 
+				}
+			}
+		}
+    }
+} 
+
+

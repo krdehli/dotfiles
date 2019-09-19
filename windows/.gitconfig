@@ -1,0 +1,40 @@
+[user]
+	email = krsdehli@gmail.com
+	name = Kim Roar Stenvard Dehli
+	
+# Color conversion table [Base16]:
+#        black <-> Default Background
+#         blue <-> Lighter Background
+#        green <-> Selection Background
+#         cyan <-> Comments
+#          red <-> Dark Foreground
+#      magenta <-> Defeault Foreground
+#       yellow <-> Light Foreground
+#        white <-> Light Background
+#   black bold <-> Variables
+#    blue bold <-> Integers
+#   green bold <-> Classes
+#    cyan bold <-> Strings
+#     red bold <-> Support
+# magenta bold <-> Functions
+#  yellow bold <-> Keywords
+#   white bold <-> Deprecated
+
+[color]
+  ui = auto
+
+[color "branch"]
+  current = cyan bold
+  local = green bold
+  remote = magenta bold
+
+[color "diff"]
+  meta = green bold
+  frag = magenta bold
+  old = black bold
+  new = cyan bold
+
+[color "status"]
+  added = cyan bold
+  changed = yellow bold
+  untracked = cyan
