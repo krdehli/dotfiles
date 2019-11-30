@@ -32,9 +32,9 @@ function Render-Github-Markdown
 	}
 	
 	Process{
-		@{text=$Data} | ConvertTo-Json | curl -X Post `
+		@{text=$Data} | ConvertTo-Json | curl -X POST `
 			-H 'Accept: application/vnd.github.v3+json' `
-			-H 'Content-Type: application-json' `
+			-H 'Content-Type: application/json' `
 			-H "Authorization: token ${Token}" `
 			https://api.github.com/markdown `
 			-d '@-' `
