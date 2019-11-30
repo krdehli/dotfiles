@@ -1,10 +1,15 @@
 function New-Cpp-Project(
-    [Parameter(Mandatory=$true)] [String] $Author, 
+    [String] $Author, 
     [Parameter(Mandatory=$true)] [String] $ProjectName,
     [String] $Year = (Get-Date).Year,
     [String] $FriendlyName = $ProjectName, 
     [String] $Template = "$Env:HOME\CppProjectTemplate"
 ) {
+	if ((!$Author) -and ($Env:FULLNAME)) {
+		$Author = $Env:FULLNAME
+	} else {
+		throw "Parameter `"Author`" was missing and the FULLNAME environment variable was not set"
+	}
     if($ProjectName -match '\s') {
         throw "Parameter `"ProjectName`" may not contain whitespace"
     }
