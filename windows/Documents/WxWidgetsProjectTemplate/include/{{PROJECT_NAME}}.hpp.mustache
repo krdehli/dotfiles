@@ -1,0 +1,20 @@
+#ifndef {{INCLUDE_GUARD}}
+#define {{INCLUDE_GUARD}}
+
+#include <wx/wx.h>
+
+class main_app : public wxApp
+{
+public:
+	bool OnInit() override;
+private:
+	wxFrame* frame_;
+	
+	bool init_xrc();
+	
+	wxDECLARE_EVENT_TABLE();
+};
+
+wxDECLARE_APP(main_app);
+
+#endif

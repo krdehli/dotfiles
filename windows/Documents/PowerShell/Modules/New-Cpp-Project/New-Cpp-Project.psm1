@@ -17,13 +17,24 @@ function New-Cpp-Project(
     New-Item ".\" -ItemType 'directory' -Name "$ProjectName"
     copy "$Template\*" ".\$ProjectName" -Recurse
 
-    Rename-Item ".\$ProjectName\src\{{PROJECT_NAME}}.cpp" "$ProjectName.cpp"
+    $Values = @{
+        PROJECT_NAME=$ProjectName
+        PROJECT_FRIENDLY_NAME=$FriendlyName
+        AUTHOR=$Author
+        YEAR=$Year
+        INCLUDE_GUARD=($ProjectName.ToUpper() + '_HPP')
+    }
+    $ValuesAsJson = ConvertTo-Json $Values -Compress
 
-    (cat ".\$ProjectName\CMakeLists.txt")     -replace '{{PROJECT_NAME}}', "$ProjectName"                    | Set-Content ".\$ProjectName\CMakeLists.txt"
-    (cat ".\$ProjectName\.vs\launch.vs.json") -replace '{{PROJECT_NAME}}', "$ProjectName"                    | Set-Content ".\$ProjectName\.vs\launch.vs.json"
-    ((cat ".\$ProjectName\LICENSE")           -replace '{{AUTHOR}}', "$Author") -replace '{{YEAR}}', "$Year" | Set-Content ".\$ProjectName\LICENSE"
-    (cat ".\$ProjectName\Readme.md")          -replace '{{PROJECT_FRIENDLY_NAME}}', "$FriendlyName"          | Set-Content ".\$ProjectName\Readme.md"
-
+    gci "$ProjectName\*" -Include '*{{*}}*' -Recurse | %{
+        $Key = (Select-String -Pattern '.*\{\{(.*)\}\}.*' -InputObject $_.FullName).Matches.Groups[1]
+        Rename-Item $_ ($_.FullName -replace "{{$Key}}", $Values["$Key"])
+    }
+    gci "$ProjectName\*" -Include '*.mustache' -Recurse | % {
+        Set-Content $_ ($ValuesAsJson | mustache - $_)
+        Rename-Item $_ ($_.FullName -replace '\.mustache', '')
+    }
+    
     Push-Location ".\$ProjectName"
     git init
     git add .

@@ -1,0 +1,29 @@
+#include "{{PROJECT_NAME}}.hpp"
+
+#include <wx/wx.h>
+#include <wx/xrc/xmlres.h>
+
+wxIMPLEMENT_APP(main_app);
+
+wxBEGIN_EVENT_TABLE(main_app, wxApp)
+wxEND_EVENT_TABLE()
+
+bool main_app::OnInit()
+{
+	if (!init_xrc()) return false;
+	
+	frame_->Show();
+	return true;
+}
+
+extern void InitXmlResource();
+bool main_app::init_xrc()
+{
+	wxXmlResource::Get()->InitAllHandlers();
+	InitXmlResource();
+
+	frame_ = new wxFrame();
+	if (!wxXmlResource::Get()->LoadFrame(frame_, nullptr, "ID_WXFRAME")) 	return false;
+	
+	return true;
+}
