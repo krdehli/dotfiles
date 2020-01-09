@@ -16,10 +16,10 @@ find_package(wxWidgets REQUIRED
 )
 
 # The GUI layout is defined in this generated source file.
-set(LAYOUT_FILE "${CMAKE_CURRENT_BINARY_DIR}/gui.cpp")
+set(LAYOUT_FILES "${CMAKE_CURRENT_BINARY_DIR}/main_window.cpp")
 
 add_executable({{PROJECT_NAME}}
-	${LAYOUT_FILE}
+	${LAYOUT_FILES}
 	include/{{PROJECT_NAME}}.hpp
 	src/{{PROJECT_NAME}}.cpp
 )
