@@ -80,8 +80,12 @@ $GitPromptSettings.WorkingColor.ForegroundColor = [ConsoleColor]::Yellow
 $GitPromptSettings.LocalDefaultStatusSymbol.ForegroundColor = [ConsoleColor]::Yellow
 $GitPromptSettings.LocalStagedStatusSymbol.ForegroundColor =  [ConsoleColor]::Magenta
 $GitPromptSettings.LocalWorkingStatusSymbol.ForegroundColor = [ConsoleColor]::White
+
 # Changes the prompt format
 function prompt {
+	#$ESC = [char]27
+	#return "$ESC[96m$($executionContext.SessionState.Path.CurrentLocation)$ESC[0m$('>' * ($nestedPromptLevel + 1)) "
+
 	return "$(& $GitPromptScriptBlock)"
 }
 
