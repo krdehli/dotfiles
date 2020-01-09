@@ -44,7 +44,7 @@ Credits:
 <NotepadPlus>
     <LexerStyles>
         <LexerType name="c" desc="C" ext="">
-          <WordsStyle name="PREPROCESSOR" styleID="9" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="PREPROCESSOR" styleID="9" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="DEFAULT" styleID="11" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="INSTRUCTION WORD" styleID="5" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="instre1" />
             <WordsStyle name="TYPEWORD" styleID="16" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="type1" />
@@ -80,7 +80,7 @@ Credits:
             <WordsStyle name="COMMENT DOC KEYWORD ERROR" styleID="18" fgColor="75715E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
         </LexerType>
         <LexerType name="java" desc="Java" ext="">
-            <WordsStyle name="PREPROCESSOR" styleID="9" fgColor="66d9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="PREPROCESSOR" styleID="9" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="DEFAULT" styleID="11" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="INSTRUCTION WORD" styleID="5" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="instre1" />
             <WordsStyle name="TYPE WORD" styleID="16" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="type1" />
@@ -98,7 +98,7 @@ Credits:
             <WordsStyle name="COMMENT DOC KEYWORD ERROR" styleID="18" fgColor="75715E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
         </LexerType>
         <LexerType name="cs" desc="C#" ext="">
-             <WordsStyle name="PREPROCESSOR" styleID="9" fgColor="66d9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="PREPROCESSOR" styleID="9" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="DEFAULT" styleID="11" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="INSTRUCTION WORD" styleID="5" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="instre1" />
             <WordsStyle name="TYPE WORD" styleID="16" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="type1" />
@@ -116,7 +116,7 @@ Credits:
             <WordsStyle name="COMMENT DOC KEYWORD ERROR" styleID="18" fgColor="75715E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
         </LexerType>
         <LexerType name="rc" desc="RC" ext="">
-            <WordsStyle name="PREPROCESSOR" styleID="9" fgColor="66d9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="PREPROCESSOR" styleID="9" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="DEFAULT" styleID="11" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="INSTRUCTION WORD" styleID="5" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="instre1" />
             <WordsStyle name="TYPE WORD" styleID="16" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="type1" />
@@ -134,7 +134,7 @@ Credits:
             <WordsStyle name="COMMENT DOC KEYWORD ERROR" styleID="18" fgColor="75715E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
         </LexerType>
         <LexerType name="tcl" desc="TCL" ext="">
-            <WordsStyle name="PREPROCESSOR" styleID="9" fgColor="66d9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="PREPROCESSOR" styleID="9" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="DEFAULT" styleID="11" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="INSTRUCTION WORD" styleID="5" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="instre1" />
             <WordsStyle name="TYPE WORD" styleID="16" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="type1" />
@@ -725,19 +725,19 @@ Credits:
         <LexerType name="cmake" desc="CMakeFile" ext="cmake">
             <WordsStyle name="DEFAULT" styleID="0" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="COMMENT" styleID="1" fgColor="75715E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="STRING D" styleID="2" fgColor="E6DB74" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="STRING L" styleID="3" fgColor="E6DB74" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="STRING R" styleID="4" fgColor="E6DB74" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="STRING D" styleID="2" fgColor="A6E22E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="STRING L" styleID="3" fgColor="A6E22E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="STRING R" styleID="4" fgColor="A6E22E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="COMMAND" styleID="5" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="instre1">if else for while</WordsStyle>
-            <WordsStyle name="PARAMETER" styleID="6" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10">bool long int char</WordsStyle>
-            <WordsStyle name="VARIABLE" styleID="7" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="PARAMETER" styleID="6" fgColor="FD971F" bgColor="272822" fontName="" fontStyle="0" fontSize="10">bool long int char</WordsStyle>
+            <WordsStyle name="VARIABLE" styleID="7" fgColor="F92672" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="USER DEFINED" styleID="8" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="type1" />
             <WordsStyle name="WHILEDEF" styleID="9" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="FOREACHDEF" styleID="10" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="IFDEF" styleID="11" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="MACRODEF" styleID="12" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="STRING VARIABLE" styleID="13" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="NUMBER" styleID="14" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="STRING VARIABLE" styleID="13" fgColor="F92672" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="NUMBER" styleID="14" fgColor="FD971F" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
         </LexerType>
         <LexerType name="searchResult" desc="Search result" ext="">
             <WordsStyle name="Search Header" styleID="1" fgColor="000080" bgColor="BBBBFF" fontName="" fontStyle="1" fontSize="" />
