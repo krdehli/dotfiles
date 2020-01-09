@@ -5,9 +5,9 @@ function New-Cpp-Project(
     [String] $FriendlyName = $ProjectName, 
     [String] $Template = "$Env:HOME\CppProjectTemplate"
 ) {
-	if ((!$Author) -and ($Env:FULLNAME)) {
+	if ((! $Author) -and ($Env:FULLNAME)) {
 		$Author = $Env:FULLNAME
-	} else {
+	} elseif (! $Author) {
 		throw "Parameter `"Author`" was missing and the FULLNAME environment variable was not set"
 	}
     if($ProjectName -match '\s') {
