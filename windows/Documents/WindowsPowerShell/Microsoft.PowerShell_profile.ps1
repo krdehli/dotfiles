@@ -52,14 +52,42 @@ Set-PSReadLineOption -colors @{
   Comment            = 'DarkCyan'
 }
 
-# Changes the prompt format
-function prompt {
-	$ESC = [char]27
-	return "$ESC[36m[$env:UserName@$env:ComputerName]$ESC[0m $ESC[96m$($executionContext.SessionState.Path.CurrentLocation)$ESC[0m$('>' * ($nestedPromptLevel + 1)) "
-}
-
 # Enables vcpkg autocompletion
 Import-Module 'D:\vcpkg\scripts\posh-vcpkg'
+
+# Enables git autocompletion
+Import-Module posh-git
+
+# Settings for git prompt
+$GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $false
+
+$GitPromptSettings.DefaultPromptPath.ForegroundColor = [ConsoleColor]::Cyan
+
+$GitPromptSettings.BeforeStatus.ForegroundColor = [ConsoleColor]::Green
+$GitPromptSettings.AfterStatus.ForegroundColor =  [ConsoleColor]::Green
+$GitPromptSettings.DelimStatus.ForegroundColor =  [ConsoleColor]::Green
+
+$GitPromptSettings.BranchColor.ForegroundColor =                      [ConsoleColor]::Magenta
+$GitPromptSettings.BranchIdenticalStatusSymbol.ForegroundColor =      [ConsoleColor]::Magenta
+$GitPromptSettings.BranchAheadStatusSymbol.ForegroundColor =          [ConsoleColor]::Cyan
+$GitPromptSettings.BranchBehindStatusSymbol.ForegroundColor =         [ConsoleColor]::DarkGray
+$GitPromptSettings.BranchBehindAndAheadStatusSymbol.ForegroundColor = [ConsoleColor]::Green
+$GitPromptSettings.BranchGoneStatusSymbol.ForegroundColor =           [ConsoleColor]::White
+
+$GitPromptSettings.IndexColor.ForegroundColor =   [ConsoleColor]::Blue
+$GitPromptSettings.WorkingColor.ForegroundColor = [ConsoleColor]::Yellow
+
+$GitPromptSettings.LocalDefaultStatusSymbol.ForegroundColor = [ConsoleColor]::Yellow
+$GitPromptSettings.LocalStagedStatusSymbol.ForegroundColor =  [ConsoleColor]::Magenta
+$GitPromptSettings.LocalWorkingStatusSymbol.ForegroundColor = [ConsoleColor]::White
+
+# Changes the prompt format
+function prompt {
+	#$ESC = [char]27
+	#return "$ESC[96m$($executionContext.SessionState.Path.CurrentLocation)$ESC[0m$('>' * ($nestedPromptLevel + 1)) "
+
+	return "$(& $GitPromptScriptBlock)"
+}
 
 # Sets the console codepage to be compatible with the PostreSQL command line tool
 # chcp 1252 > $null
