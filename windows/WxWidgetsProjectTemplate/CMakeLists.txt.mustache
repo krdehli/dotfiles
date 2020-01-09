@@ -55,9 +55,9 @@ if(WIN32)
 endif()
 
 add_custom_command(
-	OUTPUT ${LAYOUT_FILE}
-	MAIN_DEPENDENCY resources/gui.xrc
-	COMMAND wxrc resources/gui.xrc -c -v -o "${LAYOUT_FILE}"
+	OUTPUT ${LAYOUT_FILES}
+	MAIN_DEPENDENCY resources/main_window.xrc
+	COMMAND wxrc resources/main_window.xrc -c -v -o "${LAYOUT_FILES}"
 	WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
 	COMMENT "Processing wxWidgets resource"
 )
