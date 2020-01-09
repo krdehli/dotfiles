@@ -45,4 +45,22 @@ function New-Cpp-Project(
     Pop-Location
 }
 
+function New-Qt-Project(
+    [String] $Author, 
+    [Parameter(Mandatory=$true)] [String] $ProjectName,
+    [String] $Year = (Get-Date).Year,
+    [String] $FriendlyName = $ProjectName
+) {
+    New-Cpp-Project $args -Template "$Env:HOME\QtProjectTemplate"
+}
+
+function New-wxWidgets-Project(
+    [String] $Author, 
+    [Parameter(Mandatory=$true)] [String] $ProjectName,
+    [String] $Year = (Get-Date).Year,
+    [String] $FriendlyName = $ProjectName
+) {
+    New-Cpp-Project $args -Template "$Env:HOME\wxWidgetsProjectTemplate"
+}
+
 Export-ModuleMember * -Alias *
