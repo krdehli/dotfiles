@@ -51,7 +51,12 @@ function New-Qt-Project(
     [String] $Year = (Get-Date).Year,
     [String] $FriendlyName = $ProjectName
 ) {
-    New-Cpp-Project $args -Template "$Env:HOME\QtProjectTemplate"
+    New-Cpp-Project `
+        -Author $Author `
+        -ProjectName $ProjectName `
+        -Year $Year `
+        -FriendlyName $FriendlyName `
+        -Template "$Env:HOME\QtProjectTemplate"
 }
 
 function New-wxWidgets-Project(
@@ -60,7 +65,12 @@ function New-wxWidgets-Project(
     [String] $Year = (Get-Date).Year,
     [String] $FriendlyName = $ProjectName
 ) {
-    New-Cpp-Project $args -Template "$Env:HOME\wxWidgetsProjectTemplate"
+     New-Cpp-Project `
+        -Author $Author `
+        -ProjectName $ProjectName `
+        -Year $Year `
+        -FriendlyName $FriendlyName `
+        -Template "$Env:HOME\wxWidgetsProjectTemplate"
 }
 
 Export-ModuleMember * -Alias *
