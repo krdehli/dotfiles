@@ -224,6 +224,14 @@ Credits:
             <WordsStyle name="COMMENTLINE" styleID="43" fgColor="75715E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="COMMENTDOC" styleID="44" fgColor="75715E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
         </LexerType>
+		<LexerType name="json" desc="JSON" ext="">
+            <WordsStyle name="DEFAULT" styleID="11" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="NUMBER" styleID="4" fgColor="FD971F" bgColor="272822" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="STRING DOUBLE QUOTE" styleID="6" fgColor="A6E22E" bgColor="272822" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="STRING SINGLE QUOTE" styleID="7" fgColor="A6E22E" bgColor="272822" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="BOOLEAN NULL" styleID="5" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="1" fontSize="" keywordClass="instre1" />
+            <WordsStyle name="OPERATOR" styleID="10" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="1" fontSize="" />
+        </LexerType>
         <LexerType name="asp" desc="asp" ext="asp">
             <WordsStyle name="DEFAULT" styleID="81" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="COMMENTLINE" styleID="82" fgColor="75715E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
