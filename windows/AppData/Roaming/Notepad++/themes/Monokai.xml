@@ -248,17 +248,17 @@ Credits:
             <WordsStyle name="XMLEND" styleID="13" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="DEFAULT" styleID="0" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="COMMENT" styleID="9" fgColor="75715E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="NUMBER" styleID="5" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="DOUBLESTRING" styleID="6" fgColor="E6DB74" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="SINGLESTRING" styleID="7" fgColor="E6DB74" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="NUMBER" styleID="5" fgColor="FD971F" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="DOUBLESTRING" styleID="6" fgColor="A6E22E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="SINGLESTRING" styleID="7" fgColor="A6E22E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="TAG" styleID="1" fgColor="F92672" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="TAGEND" styleID="11" fgColor="F92672" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="TAGUNKNOWN" styleID="2" fgColor="F92672" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="ATTRIBUTE" styleID="3" fgColor="A6E22E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="ATTRIBUTEUNKNOWN" styleID="4" fgColor="A6E22E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="SGMLDEFAULT" styleID="21" fgColor="E6DB74" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="CDATA" styleID="17" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="ENTITY" styleID="10" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="ATTRIBUTE" styleID="3" fgColor="66d9ef" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="ATTRIBUTEUNKNOWN" styleID="4" fgColor="66d9ef" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="SGMLDEFAULT" styleID="21" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="CDATA" styleID="17" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="ENTITY" styleID="10" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
         </LexerType>
         <LexerType name="ini" desc="ini file" ext="">
             <WordsStyle name="DEFAULT" styleID="0" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
@@ -449,19 +449,19 @@ Credits:
         </LexerType>
         <LexerType name="bash" desc="bash" ext="">
             <WordsStyle name="DEFAULT" styleID="0" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="ERROR" styleID="1" fgColor="000000" bgColor="272822" fontName="" fontStyle="0" fontSize="10">ContentScroller</WordsStyle>
+            <WordsStyle name="ERROR" styleID="1" fgColor="CC6633" bgColor="272822" fontName="" fontStyle="0" fontSize="10">ContentScroller</WordsStyle>
             <WordsStyle name="INSTRUCTION WORD" styleID="4" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" keywordClass="instre1" />
-            <WordsStyle name="NUMBER" styleID="3" fgColor="AE81FF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="STRING" styleID="5" fgColor="E6DB74" bgColor="272822" fontName="" fontStyle="0" fontSize="10">onMotionChanged onMotionFinished Tween ImagesStrip ContentScroller mx transitions easing Sprite Point MouseEvent Event BitmapData Timer TimerEvent addEventListener event x y height width</WordsStyle>
-            <WordsStyle name="CHARACTER" styleID="6" fgColor="E6DB74" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="OPERATOR" styleID="7" fgColor="F92672" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="IDENTIFIER" styleID="8" fgColor="66D9EF" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="SCALAR" styleID="9" fgColor="000000" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="NUMBER" styleID="3" fgColor="FD971F" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="STRING" styleID="5" fgColor="A6E22E" bgColor="272822" fontName="" fontStyle="0" fontSize="10">onMotionChanged onMotionFinished Tween ImagesStrip ContentScroller mx transitions easing Sprite Point MouseEvent Event BitmapData Timer TimerEvent addEventListener event x y height width</WordsStyle>
+            <WordsStyle name="CHARACTER" styleID="6" fgColor="A6E22E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="OPERATOR" styleID="7" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="IDENTIFIER" styleID="8" fgColor="F92672" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="SCALAR" styleID="9" fgColor="FD971F" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
             <WordsStyle name="COMMENT LINE" styleID="2" fgColor="75715E" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="PARAM" styleID="10" fgColor="000000" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="BACKTICKS" styleID="11" fgColor="000000" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="HERE DELIM" styleID="12" fgColor="000000" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
-            <WordsStyle name="HERE Q" styleID="13" fgColor="000000" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="PARAM" styleID="10" fgColor="FD971F" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="BACKTICKS" styleID="11" fgColor="A1EFE4" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="HERE DELIM" styleID="12" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
+            <WordsStyle name="HERE Q" styleID="13" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
         </LexerType>
         <LexerType name="fortran" desc="Fortran" ext="">
             <WordsStyle name="DEFAULT" styleID="0" fgColor="F8F8F2" bgColor="272822" fontName="" fontStyle="0" fontSize="10" />
