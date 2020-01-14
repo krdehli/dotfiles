@@ -1,0 +1,39 @@
+[
+	{
+		"filepath": ".config/git/gitk",
+		"colorformat": "#{r}{g}{b}",
+		"altmustache": ["[[", "]]"]
+	},
+	{
+		"filepath": ".idlerc/config-highlight.cfg",
+		"colorformat": "#{r}{g}{b}"
+	},
+	{
+		"filepath": "AppData\\Local\\Microsoft_Corporation\\PowerShell_ISE.exe_StrongName_lw2v2vm3wmtzzpebq33gybmeoxukb04w\\3.0.0.0\\user.config",
+		"colorformat": "#FF{R}{G}{B}"
+	},
+	{
+		"filepath": "AppData\\Local\\nvim\\plugged\\base16-vim\\colors\\base16-monokai-personal.vim",
+		"colorformat": "{r}{g}{b}"
+	},
+	{
+		"filepath": "AppData\\Local\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\profiles.json",
+		"colorformat": "\"#{r}{g}{b}\""
+	},
+	{
+		"filepath": "AppData\\Roaming\\Notepad++\\themes\\Monokai.xml",
+		"colorformat": "\"{R}{G}{B}\""
+	},
+	{
+		"filepath": "AppData\\Roaming\\Notepad++\\userDefineLangs\\userDefinedLang-markdown.monokai.modern.xml",
+		"colorformat": "\"{R}{G}{B}\""
+	},
+	{
+		"filepath": "monokai.vssettings",
+		"colorformat": "\"0x00{B}{G}{R}\""
+	},
+	{
+		"filepath": "console_settings_monokai.reg",
+		"colorformat": "00{b}{g}{r}"
+	}
+]
