@@ -24,9 +24,9 @@ for o in theme_files:
         content = file.read()
         for k, v in colors.items():
             if 'altmustache' in o and len(o['altmustache']) > 1:
-                content = content.replace(o['colorformat'].format(**v), '{}{}{}'.format(o['altmustache'][0], k, o['altmustache'][1]))
+                content = content.replace(o['colorformat'].format(**v), '{}& {}{}'.format(o['altmustache'][0], k, o['altmustache'][1]))
             else:
-                content = content.replace(o['colorformat'].format(**v), '{{{{{}}}}}'.format(k))
+                content = content.replace(o['colorformat'].format(**v), '{{{{& {}}}}}'.format(k))
             
         if 'altmustache' in o and len(o['altmustache']) > 1:
             content = f'{{{{={o["altmustache"][0]} {o["altmustache"][1]}=}}}}\n' + content +f'{o["altmustache"][0]}={{{{ }}}}={o["altmustache"][1]}\n'
