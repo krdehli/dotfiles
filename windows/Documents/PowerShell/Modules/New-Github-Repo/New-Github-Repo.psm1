@@ -5,7 +5,7 @@ function New-Github-Repo(
 ) {
 	if ((!$Token) -and ($Env:GITHUB_TOKEN)) {
 		$Token = $Env:GITHUB_TOKEN
-	} else {
+	} elseif (!$Token) {
 		throw "Parameter `"Token`" was missing and the GITHUB_TOKEN environment variable was not set"
 	}
     $data = @{name=$Name; private=$Private}
