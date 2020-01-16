@@ -23,13 +23,14 @@ with open('theme_files.json') as file:
 
 for o in theme_files:
     content = ''
-    with open(f'theme_templates/{o["filepath"]}.mustache') as file:
+    encoding = o['encoding'] if 'encoding' in o else 'utf-8'
+    with open(f'theme_templates/{o["filepath"]}.mustache', encoding=encoding) as file:
         base16_strings = {k:o['colorformat'].format(**v) for k,v in colors.items()}
         base16_strings['name'] = scheme_name
         content = file.read()
         content = pystache.render(content, base16_strings)
     out_dir = Path(f'monokai_pro/{o["filepath"]}').parent
     out_dir.mkdir(parents=True,exist_ok=True)
-    with open(f'monokai_pro/{o["filepath"]}', 'w+') as out_file:
+    with open(f'monokai_pro/{o["filepath"]}', 'w+', encoding=encoding) as out_file:
         out_file.write(content)
     

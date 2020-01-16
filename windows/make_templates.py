@@ -20,7 +20,8 @@ with open('theme_files.json') as file:
 
 for o in theme_files:
     content = ''
-    with open(o['filepath']) as file:
+    encoding = o['encoding'] if 'encoding' in o else 'utf-8'
+    with open(o['filepath'], encoding=encoding) as file:
         content = file.read()
         for k, v in colors.items():
             if 'altmustache' in o and len(o['altmustache']) > 1:
@@ -33,6 +34,6 @@ for o in theme_files:
             
     out_dir = Path(f'theme_templates/{o["filepath"]}.mustache').parent
     out_dir.mkdir(parents=True,exist_ok=True)
-    with open(f'theme_templates/{o["filepath"]}.mustache', 'w+') as out_file:
+    with open(f'theme_templates/{o["filepath"]}.mustache', 'w+', encoding=encoding) as out_file:
         out_file.write(content)
         
