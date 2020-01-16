@@ -3,7 +3,7 @@ function New-Cpp-Project(
     [Parameter(Mandatory=$true)] [String] $ProjectName,
     [String] $Year = (Get-Date).Year,
     [String] $FriendlyName = $ProjectName, 
-    [String] $Template = "$Env:HOME\CppProjectTemplate"
+    [String] $Template = "$PSScriptRoot\CppProjectTemplate"
 ) {
 	if ((! $Author) -and ($Env:FULLNAME)) {
 		$Author = $Env:FULLNAME
@@ -56,7 +56,7 @@ function New-Qt-Project(
         -ProjectName $ProjectName `
         -Year $Year `
         -FriendlyName $FriendlyName `
-        -Template "$Env:HOME\QtProjectTemplate"
+        -Template "$PSScriptRoot\QtProjectTemplate"
 }
 
 function New-wxWidgets-Project(
@@ -70,7 +70,7 @@ function New-wxWidgets-Project(
         -ProjectName $ProjectName `
         -Year $Year `
         -FriendlyName $FriendlyName `
-        -Template "$Env:HOME\wxWidgetsProjectTemplate"
+        -Template "$PSScriptRoot\wxWidgetsProjectTemplate"
 }
 
 Export-ModuleMember * -Alias *
