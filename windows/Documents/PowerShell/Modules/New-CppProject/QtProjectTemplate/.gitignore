@@ -5,6 +5,7 @@ build/
 # DialogBlocks project files
 *.pjd
 *.pjd.bak
+*.pjd.old
 
 # CMake Files
 CMakeLists.txt.user

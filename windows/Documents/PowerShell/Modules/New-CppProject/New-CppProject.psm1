@@ -73,6 +73,11 @@ function New-CppProject {
         Rename-Item $_ ($_.FullName -replace '\.mustache', '')
     }
     
+    $CmakeTemplatePath = "$Env:HOMEDRIVE$Env:HOMEPATH\Documents\VisualStudio\CMakeSettingsTemplates\Standard.json"
+    if (Test-Path "$CmakeTemplatePath" -PathType Leaf) {
+        copy "$CmakeTemplatePath" "$Path\CMakeSettings.json" 
+    }
+
     Push-Location "$Path"
     git init -q                       | Out-Null
     git add .                         | Out-Null
@@ -92,5 +97,4 @@ function New-CppProject {
     }
 
     Pop-Location
-    
 }
