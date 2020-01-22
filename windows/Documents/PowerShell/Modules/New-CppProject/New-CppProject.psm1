@@ -5,7 +5,7 @@ function New-CppProject {
     )]
     param(
         [Parameter(Mandatory=$true, Position=0)] 
-        [ValidatePattern('\S', ErrorMessage='ProjectName may not contain any whitespace')]
+        [ValidatePattern('\S', ErrorMessage='Path may not contain any whitespace')]
         [ValidateScript({!$(Test-Path "$_" -PathType Any)}, ErrorMessage="A file or folder with the name '{0}' already exists")]
         [String] $Path,
 
@@ -15,7 +15,7 @@ function New-CppProject {
         [ValidateScript({($_ -ne "") -and ($_ -ne $null)})]
         [String] $Author = $Env:FULLNAME,
 
-        [ValidatePattern('\d{4}', ErrorMessage='Date must consist of for digits')] 
+        [ValidatePattern('\d{4}', ErrorMessage='Year must consist of for digits')] 
         [String] $Year = (Get-Date).Year,
 
         [Parameter(ParameterSetName='Predefined')]
@@ -23,8 +23,15 @@ function New-CppProject {
         [String] $Type = 'Default',
 
         [Parameter(ParameterSetName='Custom')]
-        [ValidateScript({Test-Path "$_" -PathType Container}, ErrorMessage="{0} Template must exists and must be a directory")]
-        [String] $Template
+        [ValidateScript({Test-Path "$_" -PathType Container}, ErrorMessage="{0} must exists and must be a directory")]
+        [String] $Template,
+
+        [Switch] $CreateRemote,
+
+        [ValidatePattern('[\da-f]{40}', ErrorMessage='Invalid token format')]
+	    [String] $GithubToken = $Env:GITHUB_TOKEN,
+
+        [Switch] $PublicRepo
     )
 
     $PredefinedTemplates = @{
@@ -73,8 +80,17 @@ function New-CppProject {
 
     git checkout -q -b 'develop'      | Out-Null
     git branch -q 'release'           | Out-Null
+
+    if ($CreateRemote) {
+        try {
+            New-GithubRepo $(Split-Path $Path -Leaf) -Token $GithubToken -Public:$PublicRepo -OutVariable result | Out-Null
+            git remote add origin $result.html_url | Out-Null
+            git push -q --set-upstream origin 'develop' | Out-Null
+        } catch {
+            Write-Error "Something went wrong when creating the remote repository:`r`n $_"
+        }
+    }
+
     Pop-Location
     
 }
-
-Export-ModuleMember New-CppProject

@@ -43,4 +43,4 @@ function Render-Github-Markdown
 	End{}
 }
 
-Export-ModuleMember * -Alias *
+Export-ModuleMember Render-Github-Markdown
