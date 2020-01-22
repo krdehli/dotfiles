@@ -1,0 +1,274 @@
+:root {
+	/* Base16 color scheme */
+	--base00: #221f22; /* Default background */
+	--base01: #2d2a2e; /* Lighter Background (Used for status bars) */
+	--base02: #403e41; /* Selection Background */
+	--base03: #5b595c; /* Comments, Invisibles, Line Highlighting */
+	--base04: #727072; /* Dark Foreground (Used for status bars) */
+	--base05: #fcfcfa; /* Default Foreground, Caret, Delimiters, Operators */
+	--base06: #f3f3f2; /* Light Foreground (Not often used) */
+	--base07: #f4f9ed; /* Light Background (Not often used) */
+	--base08: #ff6188; /* Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted */
+	--base09: #fc9867; /* Integers, Boolean, Constants, XML Attributes, Markup Link Url */
+	--base0a: #ffd866; /* Classes, Markup Bold, Search Text Background */
+	--base0b: #a9dc76; /* Strings, Inherited Class, Markup Code, Diff Inserted */
+	--base0c: #cef1f4; /* Support, Regular Expressions, Escape Characters, Markup Quotes */
+	--base0d: #78dce8; /* Functions, Methods, Attribute IDs, Headings */
+	--base0e: #ab9df2; /* Keywords, Storage, Selector, Markup Italic, Diff Changed */
+	--base0f: #6e493a; /* Deprecated, Opening/Closing Embedded Language Tags e.g. */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Fira Sans, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    background: var(--base07);
+    color: var(--base00);
+}
+
+article, aside, detials, figcaption, figure, footer, header, main, menu, nav, section {
+    display: block;
+}
+
+article {
+	min-width: 200px;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 45px;
+}
+
+@media (max-width: 767px) {
+	article {
+		padding: 15px;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h1, h2 {
+    padding-bottom: .3em;
+    border-bottom: 1px solid;
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+h5 {
+    font-size: 0.875em;
+}
+
+h6 {
+    font-size: 0.85em;
+}
+
+a {
+    color: var(--base08);
+    text-decoration: none;
+    background-color: initial;
+}
+
+ol, ul {
+    padding-left: 2em;
+}
+
+img {
+    max-width: 100%;
+    box-sizing: initial;
+    border-style: none;
+}
+
+blockquote, details, dl, ol, p, pre, table {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: .25em solid #dfe2e5;
+}
+
+td.linenos { 
+	background-color: #f0f0f0; 
+	padding-right: 10px; 
+}
+span.lineno { 
+	background-color: #f0f0f0; 
+	padding: 0 5px 0 5px; 
+}
+
+body .hll {
+	background-color: var(--base02); 
+}
+
+code, pre, tt {
+    font-family: Fira Mono, monospace;
+}
+
+code, tt {
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    color: var(--base05);
+    background-color: var(--base00);
+    border-radius: 3px;
+}
+
+pre {
+    word-wrap: normal;
+	code {
+		display: block;
+	}
+}
+
+.highlight {
+    margin-bottom: 16px;
+
+    pre {
+        background-color: var(--base00);
+        color: var(--base05);
+        padding: 16px;
+        font-size: 85%;
+        border-radius: 3px;
+        line-height: 1.45;
+        overflow: auto;
+        margin-bottom: 0;
+        word-break: normal;
+    }
+
+    .c,  /* Comment */
+    .ch, /* Comment.Hashbang */
+    .cm, /* Comment.Multiline */
+    
+    .c1, /* Comment.Single */
+    .cs  /* Comment.Special */ { 
+		color: var(--base03); 
+	} 
+	
+    .l,  /* Literal */
+    .n,  /* Name */
+    .o,  /* Operator */
+    .p,  /* Punctuation */
+    .gi, /* Generic.Inserted */
+    .go, /* Generic.Output */
+    .gu, /* Generic.Subheading */
+    .ld, /* Literal.Date */
+    .na, /* Name.Attribute */
+    .ni, /* Name.Entity */
+    .nl, /* Name.Label */
+    .nx, /* Name.Other */
+    .nt, /* Name.Tag */
+    .w,  /* Text.Whitespace */ 
+	.gp  /* Generic.Prompt */ { 
+		color: var(--base05); 
+	} 
+    .gp { 
+		font-weight: bold 
+	} 
+	
+    .py, /* Name.Property */
+    .nv, /* Name.Variable */
+    .vc, /* Name.Variable.Class */
+    .vg, /* Name.Variable.Global */
+    .vi, /* Name.Variable.Instance */
+    .vm  /* Name.Variable.Magic */ { 
+		color: var(--base08); 
+	} 
+	
+    .kn, /* Keyword.Namespace */
+    .m , /* Literal.Number */
+    .no, /* Name.Constant */
+    .nd, /* Name.Decorator */
+    .nn, /* Name.Namespace */
+    .mb, /* Literal.Number.Bin */
+    .mf, /* Literal.Number.Float */
+    .mh, /* Literal.Number.Hex */
+    .mi, /* Literal.Number.Integer */
+    .mo, /* Literal.Number.Oct */
+    .il  /* Literal.Number.Integer.Long */ { 
+		color: var(--base09); 
+	} 
+	
+    .nc, /* Name.Class */
+    .ne /* Name.Exception */ { 
+		color: var(--base0a); 
+	}
+	
+    .s , /* Literal.String */
+    .sa, /* Literal.String.Affix */
+    .sb, /* Literal.String.Backtick */
+    .sc, /* Literal.String.Char */
+    .dl, /* Literal.String.Delimiter */
+    .sd, /* Literal.String.Doc */
+    .s2, /* Literal.String.Double */
+    .sh, /* Literal.String.Heredoc */
+    .si, /* Literal.String.Interpol */
+    .sx, /* Literal.String.Other */
+    .s1, /* Literal.String.Single */
+    .ss,  /* Literal.String.Symbol */
+    .cpf /* Comment.preprocFile */	{ 
+		color: var(--base0b); 
+	}
+	
+    .se, /* Literal.String.Escape */
+    .sr  /* Literal.String.Regex */ { 
+		color: var(--base0c); 
+	}
+	
+    .nf, /* Name.Function */
+    .ow, /* Operator.Word */
+	.cp, /* Comment.preproc */
+    .fm  /* Name.Function.Magic */ { 
+		color: var(--base0d); 
+	}
+	
+    .k , /* Keyword */
+    .kc, /* Keyword.Constant */
+    .kd, /* Keyword.Declaration */
+    .kp, /* Keyword.Pseudo */
+    .kr, /* Keyword.Reserved */
+    .kt, /* Keyword.Type */
+    .nb, /* Name.Builtin */
+    .bp  /* Name.Builtin.Pseudo */ { 
+		color: var(--base0e); 
+	}
+	
+    .err  /* Error */ { 
+		background-color: var(--base0f); 
+	}
+    .gd /* Generic.Deleted */ { 
+		color: var(--base0f); 
+	} 
+	
+    .ge  /* Generic.Emph */ { 
+		font-style: italic 
+	}
+    .gs  /* Generic.Strong */ { 
+		font-weight: bold 
+	}
+}
+
