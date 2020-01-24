@@ -126,7 +126,7 @@ Credits:
     </LexerType>
     <LexerType name="bash" desc="bash" ext="">
       <WordsStyle name="DEFAULT" styleID="0" fgColor="FCFCFA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
-      <WordsStyle name="ERROR" styleID="1" fgColor="6E493A" bgColor="221F22" fontName="" fontStyle="0" fontSize="10">ContentScroller</WordsStyle>
+      <WordsStyle name="ERROR" styleID="1" fgColor="C9756A" bgColor="221F22" fontName="" fontStyle="0" fontSize="10">ContentScroller</WordsStyle>
       <WordsStyle name="INSTRUCTION WORD" styleID="4" fgColor="AB9DF2" bgColor="221F22" fontName="" fontStyle="0" fontSize="10" keywordClass="instre1"/>
       <WordsStyle name="NUMBER" styleID="3" fgColor="FC9867" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="STRING" styleID="5" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize="10">onMotionChanged onMotionFinished Tween ImagesStrip ContentScroller mx transitions easing Sprite Point MouseEvent Event BitmapData Timer TimerEvent addEventListener event x y height width</WordsStyle>
@@ -136,7 +136,7 @@ Credits:
       <WordsStyle name="SCALAR" styleID="9" fgColor="FF6188" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT LINE" styleID="2" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="PARAM" styleID="10" fgColor="FF6188" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
-      <WordsStyle name="BACKTICKS" styleID="11" fgColor="CEF1F4" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
+      <WordsStyle name="BACKTICKS" styleID="11" fgColor="B0E5DA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="HERE DELIM" styleID="12" fgColor="FCFCFA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="HERE Q" styleID="13" fgColor="FCFCFA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
     </LexerType>
@@ -230,7 +230,7 @@ Credits:
       <WordsStyle name="CHARACTER" styleID="7" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="OPERATOR" styleID="10" fgColor="FCFCFA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="VERBATIM" styleID="13" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
-      <WordsStyle name="REGEX" styleID="14" fgColor="CEF1F4" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
+      <WordsStyle name="REGEX" styleID="14" fgColor="B0E5DA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT" styleID="1" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT LINE" styleID="2" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT DOC" styleID="3" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
@@ -363,7 +363,7 @@ Credits:
       <WordsStyle name="CHARACTER" styleID="7" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="OPERATOR" styleID="10" fgColor="FCFCFA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="VERBATIM" styleID="13" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
-      <WordsStyle name="REGEX" styleID="14" fgColor="CEF1F4" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
+      <WordsStyle name="REGEX" styleID="14" fgColor="B0E5DA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT" styleID="1" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT LINE" styleID="2" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT DOC" styleID="3" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
@@ -381,7 +381,7 @@ Credits:
       <WordsStyle name="SINGLESTRING" styleID="49" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="SYMBOLS" styleID="50" fgColor="FCFCFA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="STRINGEOL" styleID="51" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
-      <WordsStyle name="REGEX" styleID="52" fgColor="CEF1F4" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
+      <WordsStyle name="REGEX" styleID="52" fgColor="B0E5DA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT" styleID="42" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENTLINE" styleID="43" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENTDOC" styleID="44" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
@@ -582,7 +582,7 @@ Credits:
       <WordsStyle name="COMMENT STREAM" styleID="13" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
       <WordsStyle name="HERE STRING" styleID="14" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
       <WordsStyle name="HERE CHARACTER" styleID="15" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
-      <WordsStyle name="COMMENT DOC KEYWORD" styleID="16" fgColor="CEF1F4" bgColor="221F22" fontName="" fontStyle="1" fontSize="" keywordClass="type4"/>
+      <WordsStyle name="COMMENT DOC KEYWORD" styleID="16" fgColor="B0E5DA" bgColor="221F22" fontName="" fontStyle="1" fontSize="" keywordClass="type4"/>
     </LexerType>
     <LexerType name="props" desc="Properties file" ext="">
       <WordsStyle name="DEFAULT" styleID="0" fgColor="FCFCFA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
@@ -616,7 +616,7 @@ Credits:
       <WordsStyle name="CHARACTER" styleID="7" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="OPERATOR" styleID="10" fgColor="FCFCFA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="VERBATIM" styleID="13" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
-      <WordsStyle name="REGEX" styleID="14" fgColor="CEF1F4" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
+      <WordsStyle name="REGEX" styleID="14" fgColor="B0E5DA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT" styleID="1" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT LINE" styleID="2" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT DOC" styleID="3" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
@@ -649,7 +649,7 @@ Credits:
     </LexerType>
     <LexerType name="rust" desc="Rust" ext="">
       <WordsStyle name="DEFAULT" styleID="32" fgColor="FCFCFA" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
-      <WordsStyle name="WHITESPACE" styleID="0" fgColor="CEF1F4" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
+      <WordsStyle name="WHITESPACE" styleID="0" fgColor="B0E5DA" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
       <WordsStyle name="BLOCK COMMENT" styleID="1" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
       <WordsStyle name="LINE COMMENT" styleID="2" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
       <WordsStyle name="BLOCK DOC COMMENT" styleID="3" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
@@ -669,7 +669,7 @@ Credits:
       <WordsStyle name="IDENTIFIER" styleID="17" fgColor="FCFCFA" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
       <WordsStyle name="LIFETIME" styleID="18" fgColor="FCFCFA" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
       <WordsStyle name="MACRO" styleID="19" fgColor="78DCE8" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
-      <WordsStyle name="LEXICAL ERROR" styleID="20" fgColor="FCFCFA" bgColor="6E493A" fontName="" fontStyle="0" fontSize=""/>
+      <WordsStyle name="LEXICAL ERROR" styleID="20" fgColor="FCFCFA" bgColor="C9756A" fontName="" fontStyle="0" fontSize=""/>
       <WordsStyle name="BYTE STRING" styleID="21" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
       <WordsStyle name="RAW BYTE STRING" styleID="22" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
       <WordsStyle name="BYTE CHARACTER" styleID="23" fgColor="7F007F" bgColor="221F22" fontName="" fontStyle="0" fontSize=""/>
@@ -720,7 +720,7 @@ Credits:
       <WordsStyle name="CHARACTER" styleID="7" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="OPERATOR" styleID="10" fgColor="FCFCFA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="VERBATIM" styleID="13" fgColor="A9DC76" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
-      <WordsStyle name="REGEX" styleID="14" fgColor="CEF1F4" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
+      <WordsStyle name="REGEX" styleID="14" fgColor="B0E5DA" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT" styleID="1" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT LINE" styleID="2" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>
       <WordsStyle name="COMMENT DOC" styleID="3" fgColor="5B595C" bgColor="221F22" fontName="" fontStyle="0" fontSize="10"/>

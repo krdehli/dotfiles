@@ -21,19 +21,19 @@
 		"colorformat": "\"#{r}{g}{b}\""
 	},
 	{
-		"filepath": "AppData\\Roaming\\Notepad++\\themes\\Monokai.xml",
+		"filepath": "AppData\\Roaming\\Notepad++\\themes\\Monokai Pro.xml",
 		"colorformat": "\"{R}{G}{B}\""
 	},
 	{
-		"filepath": "AppData\\Roaming\\Notepad++\\userDefineLangs\\userDefinedLang-markdown.monokai.modern.xml",
+		"filepath": "AppData\\Roaming\\Notepad++\\userDefineLangs\\userDefinedLang-markdown.monokai-pro.modern.xml",
 		"colorformat": "\"{R}{G}{B}\""
 	},
 	{
-		"filepath": "monokai.vssettings",
+		"filepath": "monokai_pro.vssettings",
 		"colorformat": "\"0x00{B}{G}{R}\""
 	},
 	{
-		"filepath": "console_settings_monokai.reg",
+		"filepath": "console_settings_monokai_pro.reg",
 		"colorformat": "00{b}{g}{r}",
 		"encoding": "utf-16_le"
 	}

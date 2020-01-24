@@ -560,8 +560,8 @@
         "brightCyan": "#a9dc76",
         "brightGreen": "#ffd866",
         "brightPurple": "#78dce8",
-        "brightRed": "#cef1f4",
-        "brightWhite": "#6e493a",
+        "brightRed": "#b0e5da",
+        "brightWhite": "#c9756a",
         "brightYellow": "#ab9df2",
         "cyan": "#5b595c",
         "foreground": "#fcfcfa",
@@ -569,8 +569,8 @@
         "name": "Monokai Pro",
         "purple": "#fcfcfa",
         "red": "#727072",
-        "white": "#f4f9ed",
-        "yellow": "#f3f3f2"
+        "white": "#f4f4f4",
+        "yellow": "#f7f7f7"
       },
       {
         "background": "#272822",

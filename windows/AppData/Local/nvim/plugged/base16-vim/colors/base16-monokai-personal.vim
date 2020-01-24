@@ -27,10 +27,10 @@ let s:gui04        = "727072"
 let g:base16_gui04 = "727072"
 let s:gui05        = "fcfcfa"
 let g:base16_gui05 = "fcfcfa"
-let s:gui06        = "f3f3f2"
-let g:base16_gui06 = "f3f3f2"
-let s:gui07        = "f4f9ed"
-let g:base16_gui07 = "f4f9ed"
+let s:gui06        = "f7f7f7"
+let g:base16_gui06 = "f7f7f7"
+let s:gui07        = "f4f4f4"
+let g:base16_gui07 = "f4f4f4"
 let s:gui08        = "ff6188"
 let g:base16_gui08 = "ff6188"
 let s:gui09        = "fc9867"
@@ -39,14 +39,14 @@ let s:gui0A        = "ffd866"
 let g:base16_gui0A = "ffd866"
 let s:gui0B        = "a9dc76"
 let g:base16_gui0B = "a9dc76"
-let s:gui0C        = "cef1f4"
-let g:base16_gui0C = "cef1f4"
+let s:gui0C        = "b0e5da"
+let g:base16_gui0C = "b0e5da"
 let s:gui0D        = "78dce8"
 let g:base16_gui0D = "78dce8"
 let s:gui0E        = "ab9df2"
 let g:base16_gui0E = "ab9df2"
-let s:gui0F        = "6e493a"
-let g:base16_gui0F = "6e493a"
+let s:gui0F        = "c9756a"
+let g:base16_gui0F = "c9756a"
 
 " Terminal color definitions
 let s:cterm00        = "00"
@@ -105,7 +105,7 @@ if has("nvim")
   let g:terminal_color_3 =  "#ffd866"
   let g:terminal_color_4 =  "#78dce8"
   let g:terminal_color_5 =  "#ab9df2"
-  let g:terminal_color_6 =  "#cef1f4"
+  let g:terminal_color_6 =  "#b0e5da"
   let g:terminal_color_7 =  "#fcfcfa"
   let g:terminal_color_8 =  "#5b595c"
   let g:terminal_color_9 =  "#ff6188"
@@ -113,8 +113,8 @@ if has("nvim")
   let g:terminal_color_11 = "#ffd866"
   let g:terminal_color_12 = "#78dce8"
   let g:terminal_color_13 = "#ab9df2"
-  let g:terminal_color_14 = "#cef1f4"
-  let g:terminal_color_15 = "#f4f9ed"
+  let g:terminal_color_14 = "#b0e5da"
+  let g:terminal_color_15 = "#f4f4f4"
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_5
   if &background == "light"
@@ -129,7 +129,7 @@ elseif has("terminal")
         \ "#ffd866",
         \ "#78dce8",
         \ "#ab9df2",
-        \ "#cef1f4",
+        \ "#b0e5da",
         \ "#fcfcfa",
         \ "#5b595c",
         \ "#ff6188",
@@ -137,8 +137,8 @@ elseif has("terminal")
         \ "#ffd866",
         \ "#78dce8",
         \ "#ab9df2",
-        \ "#cef1f4",
-        \ "#f4f9ed",
+        \ "#b0e5da",
+        \ "#f4f4f4",
         \ ]
 endif
 

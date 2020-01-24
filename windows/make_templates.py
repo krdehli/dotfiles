@@ -3,7 +3,7 @@ import yaml
 from pathlib import Path
 
 colors = None
-with open('monokai.yaml') as file:
+with open('monokai_pro.yaml') as file:
     temp = yaml.load(file, yaml.BaseLoader)
     del temp['author']
     del temp['scheme']

@@ -45,7 +45,7 @@ set filesepfgcolor #fcfcfa
 set linehoverbgcolor #5b595c
 set linehoverfgcolor black
 set linehoveroutlinecolor #fcfcfa
-set mainheadcirclecolor #cef1f4
+set mainheadcirclecolor #b0e5da
 set workingfilescirclecolor #ff6188
 set indexcirclecolor #a9dc76
 set circlecolors {#221f22 #78dce8 #403e41 #78dce8 #78dce8}
