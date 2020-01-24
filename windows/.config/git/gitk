@@ -16,41 +16,41 @@ set hideremotes 0
 set showlocalchanges 1
 set datetimeformat {%Y-%m-%d %H:%M:%S}
 set limitdiffs 1
-set uicolor #49483e
+set uicolor #403e41
 set want_ttk 1
-set bgcolor #272822
-set fgcolor #f8f8f2
-set uifgcolor #f8f8f2
+set bgcolor #221f22
+set fgcolor #fcfcfa
+set uifgcolor #fcfcfa
 set uifgdisabledcolor #6272a4
-set colors {#a6e22e #f92672 #ae81ff #fd971f #f8f8f8 #f4bf75 #f4bf75}
-set diffcolors {#f92672 #a6e22e #ae81ff}
-set mergecolors {#f92672 #ae81ff #a6e22e #ae81ff #f4bf75 #8be9fd #fd971f #75715e #8be9fd #fd971f #8be9fd #f4bf75 #8be9fd #a6e22e #f4bf75 #fd971f}
-set markbgcolor #272822
+set colors {#a9dc76 #ff6188 #ab9df2 #fc9867 #f8f8f8 #ffd866 #ffd866}
+set diffcolors {#ff6188 #a9dc76 #ab9df2}
+set mergecolors {#ff6188 #ab9df2 #a9dc76 #ab9df2 #ffd866 #8be9fd #fc9867 #5b595c #8be9fd #fc9867 #8be9fd #ffd866 #8be9fd #a9dc76 #ffd866 #fc9867}
+set markbgcolor #221f22
 set diffcontext 3
-set selectbgcolor #49483e
-set foundbgcolor #75715e
-set currentsearchhitbgcolor #f4bf75
+set selectbgcolor #403e41
+set foundbgcolor #5b595c
+set currentsearchhitbgcolor #ffd866
 set extdifftool meld
 set perfile_attrs 0
-set headbgcolor #a6e22e
+set headbgcolor #a9dc76
 set headfgcolor black
-set headoutlinecolor #f8f8f2
-set remotebgcolor #f4bf75
-set tagbgcolor #75715e
+set headoutlinecolor #fcfcfa
+set remotebgcolor #ffd866
+set tagbgcolor #5b595c
 set tagfgcolor black
-set tagoutlinecolor #f8f8f2
-set reflinecolor #f8f8f2
-set filesepbgcolor #49483e
-set filesepfgcolor #f8f8f2
-set linehoverbgcolor #75715e
+set tagoutlinecolor #fcfcfa
+set reflinecolor #fcfcfa
+set filesepbgcolor #403e41
+set filesepfgcolor #fcfcfa
+set linehoverbgcolor #5b595c
 set linehoverfgcolor black
-set linehoveroutlinecolor #f8f8f2
-set mainheadcirclecolor #a1efe4
-set workingfilescirclecolor #f92672
-set indexcirclecolor #a6e22e
-set circlecolors {#272822 #66d9ef #49483e #66d9ef #66d9ef}
-set linkfgcolor #ae81ff
-set circleoutlinecolor #49483e
+set linehoveroutlinecolor #fcfcfa
+set mainheadcirclecolor #cef1f4
+set workingfilescirclecolor #ff6188
+set indexcirclecolor #a9dc76
+set circlecolors {#221f22 #78dce8 #403e41 #78dce8 #78dce8}
+set linkfgcolor #ab9df2
+set circleoutlinecolor #403e41
 set geometry(main) 1920x997+0+24
 set geometry(state) zoomed
 set geometry(topwidth) 1920
