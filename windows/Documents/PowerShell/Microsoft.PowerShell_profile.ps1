@@ -55,6 +55,11 @@ Set-PSReadLineOption -colors @{
 # Enables vcpkg autocompletion
 Import-Module 'D:\vcpkg\scripts\posh-vcpkg'
 
+if (Get-Command "${Env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe") {
+	$VsInstallPath = & "${Env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -property installationPath
+	Import-Module "$VsInstallPath\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
+}
+
 # Enables git autocompletion
 Import-Module posh-git
 
