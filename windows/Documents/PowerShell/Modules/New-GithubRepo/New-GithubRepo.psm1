@@ -13,7 +13,7 @@ function New-GithubRepo {
 	if (!$Token -or !($Token -match '[\da-f]{40}')) {
 		throw "Token and or %GITHUB_TOKEN% was missing or invalid"
 	}
-    $data = @{name=$Name; private=$(!$Private)}
+    $data = @{name=$Name; private=$(!$Public)}
     $data | ConvertTo-Json -Compress | curl `
         -s -f -d '@-'`
 		-H 'Accept: application/vnd.github.v3+json' `
