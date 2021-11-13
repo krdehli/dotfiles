@@ -1,0 +1,281 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "extensions.ignoreRecommendations": true,
+    "colorize.languages": [
+        "json",
+        "css",
+        "sass",
+        "scss",
+        "less",
+        "postcss",
+        "sss",
+        "stylus",
+        "xml",
+        "svg"
+    ],
+    "editor.rulers": [100],
+    "editor.tokenColorCustomizations": {
+        "[Monokai Pro]": {
+            "functions": "#78dce8",
+            "numbers": "#fc9867",
+            "keywords": "#ab9df2",
+            "strings": "#a9dc76",
+            "types": "#ffd866",
+            "variables": "#ff6188",
+            "comments": "#727072",
+            "textMateRules": [
+                {
+                    "scope": ["comment"],
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": [
+                        "meta.preprocessor.macro",
+                        "meta.preprocessor.pragma"
+                    ],
+                    "settings": {
+                        "foreground": "#fcfcfa"
+                    }
+                },
+                {
+                    "scope": [
+                        "punctuation",
+                        "punctuation.definition.variable",
+                        "meta.parameter.cpp",
+                        "meta.brace.round",
+                        "meta.brace.square"
+                    ],
+                    "settings": {
+                        "foreground": "#fcfcfa"
+                    }
+                },
+                {
+                    "scope": [ 
+                        "keyword", 
+                        "variable.language",
+                        "storage.modifier",
+                        "storage.type",
+                        "storage.type.modifier",
+                        "support.type",
+                        "support.function.builtin.python"
+                    ],
+                    "settings": {
+                        "foreground": "#ab9df2",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": [
+                        "keyword.operator",
+                        "entity.name.operator",
+                        "entity.name.label",
+                        "storage.modifier.pointer",
+                        "storage.modifier.reference",
+                        "storage.type.function.arrow"
+                    ],
+                    "settings": {
+                        "foreground": "#fcfcfa"
+                    }
+                },
+                {
+                    "scope": [ 
+                        "keyword.operator.new",
+                        "keyword.operator.wordlike",
+                        "keyword.operator.new",
+                        "keyword.operator.delete",
+                        "keyword.operator.not",
+                        "keyword.operator.not_eq",
+                        "keyword.operator.compl",
+                        "keyword.operator.and",
+                        "keyword.operator.and_eq",
+                        "keyword.operator.or",
+                        "keyword.operator.or_eq",
+                        "keyword.operator.bitand",
+                        "keyword.operator.bitor",
+                        "keyword.operator.noexcept",
+                        "keyword.operator.functionlike",
+                        "keyword.operator.sizeof",
+                        "keyword.operator.alignof",
+                        "keyword.operator.alignas",
+                        "keyword.operator.typeid",
+                        "keyword.operator.cast",
+                        "keyword.operator.logical.python",
+                        "keyword.operator.expression.typeof.js"
+                    ],
+                    "settings": {
+                        "foreground": "#ab9df2"
+                    }
+                },
+                {
+                    "scope":[
+                        "entity.name",
+                        "entity.name.namespace",
+                        "entity.name.scope-resolution.namespace.scope-resolution.namespace.using.cpp",
+                        "entity.name.scope-resolution.function.call",
+                        "entity.name.scope-resolution.function.definition",
+                        "entity.name.scope-resolution.namespace.block",
+                        "entity.name.scope-resolution.parameter",
+                        "entity.name.scope-resolution.template.definition",
+                        "entity.name.scope-resolution.operator",
+                        "storage.modifier.package.java"
+                    ],
+                    "settings": {
+                        "foreground": "#fc9867"
+                    }
+                },
+                {
+                    "scope": [
+                        "variable",
+                        "variable.other",
+                        "variable.other.readwrite",
+                        "variable.other.property",
+                        "variable.other.member",
+                        "variable.language.special.self.python",
+                        "support.variable",
+                        "meta.attribute.python",
+                        "storage.source.cmake"
+                    ],
+                    "settings": {
+                        "foreground": "#ff6188"
+                    }
+                },
+                {
+                    "scope": [ 
+                        "variable.parameter",
+                        "variable.parameter.function.language.special.self.python"
+                    ],
+                    "settings": {
+                        "foreground": "#ff6188",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": [ 
+                        "entity.name.function.operator",
+                        "entity.name.function.templated",
+                        "entity.name.function.member.static",
+                        "meta.function-call.python",
+                        "meta.function-call.generic.python"
+                    ],
+                    "settings": {
+                        "foreground": "#78dce8"
+                    }
+                },
+                {
+                    "scope": [ 
+                        "entity.name.type",
+                        "entity.name.type.class.templated",
+                        "entity.other.inherited-class", 
+                        "storage.modifier.import.java",
+                        "storage.type.java",
+                        "storage.type.object.array.java",
+                        "storage.type.powershell"
+                    ],
+                    "settings": {
+                        "foreground": "#ffd866",
+                        "fontStyle": ""
+                    }
+                },
+                {
+                    "scope": [
+                        "punctuation.definition.string.begin",
+                        "punctuation.definition.string.end",
+                        "punctuation.definition.string.template.begin",
+                        "punctuation.definition.string.template.end",
+                        "storage.type.string.python",
+                        "entity.name.operator.custom-literal.string"
+                    ],
+                    "settings": {
+                        "foreground": "#a9dc76",
+                    }
+                },
+                {
+                    "scope": [ 
+                        "constant.character.escape",
+                        "constant.character.format.placeholder.other.python"
+                    ],
+                    "settings": {
+                        "foreground": "#cef1f4"
+                    }
+                },
+                {
+                    "scope": [ 
+                        "keyword.control.directive", 
+                        "punctuation.definition.directive.cpp" 
+                    ],
+                    "settings": {
+                        "foreground": "#78dce8"
+                    }
+                },
+                {
+                    "scope": [ 
+                        "constant.other",
+                        "support.constant",
+                        "variable.other.constant",
+                        "variable.other.enummember"
+                    ],
+                    "settings": {
+                        "foreground": "#fc9867"
+                    }
+                },
+                {
+                    "scope": [ 
+                        "entity.name.function.preprocessor",
+                        "entity.name.function.preprocessor.cpp"
+                    ],
+                    "settings": {
+                        "foreground": "#fc9867"
+                    }
+                },
+                {
+                    "scope": [ 
+                        "keyword.other.unit.suffix.integer",
+                        "keyword.other.unit.user-defined",
+                        "keyword.other.unit.binary",
+                        "keyword.other.unit.octal",
+                        "keyword.other.unit.hexadecimal",
+                        "punctuation.separator.constant.numeric"
+                    ],
+                    "settings": {
+                        "foreground": "#fc9867"
+                    }
+                }
+            ]
+        }
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "[Monokai Pro]": {
+            "enabled": true
+        }
+    },
+    "sshfs.configs": [
+        {
+            "name": "linux_workshop_rasbpi",
+            "label": "Linux Workshop Rapberry Pi",
+            "host": "192.168.0.177",
+            "username": "pi",
+            "password": "linuxkurs"
+        }
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.fontFamily": "'Fira Mono', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": false,
+    "editor.fontWeight": "normal",
+    "workbench.startupEditor": "newUntitledFile",
+    "powershell.promptToUpdatePowerShell": false,
+    "cmake.generator": "Ninja",
+    "cmake.preferredGenerators": [
+        "Ninja"
+    ],
+    "cmake.configureSettings": {
+        "CMAKE_TOOLCHAIN_FILE": "C:/Exclude/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-md"
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    }
+}
