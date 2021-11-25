@@ -16,19 +16,19 @@ set hideremotes 0
 set showlocalchanges 1
 set datetimeformat {%Y-%m-%d %H:%M:%S}
 set limitdiffs 1
-set uicolor #403e41
+set uicolor #434144
 set want_ttk 1
-set bgcolor #221f22
+set bgcolor #2d2a2e
 set fgcolor #fcfcfa
 set uifgcolor #fcfcfa
 set uifgdisabledcolor #6272a4
 set colors {#a9dc76 #ff6188 #ab9df2 #fc9867 #f8f8f8 #ffd866 #ffd866}
 set diffcolors {#ff6188 #a9dc76 #ab9df2}
-set mergecolors {#ff6188 #ab9df2 #a9dc76 #ab9df2 #ffd866 #8be9fd #fc9867 #5b595c #8be9fd #fc9867 #8be9fd #ffd866 #8be9fd #a9dc76 #ffd866 #fc9867}
-set markbgcolor #221f22
+set mergecolors {#ff6188 #ab9df2 #a9dc76 #ab9df2 #ffd866 #8be9fd #fc9867 #727072 #8be9fd #fc9867 #8be9fd #ffd866 #8be9fd #a9dc76 #ffd866 #fc9867}
+set markbgcolor #2d2a2e
 set diffcontext 3
-set selectbgcolor #403e41
-set foundbgcolor #5b595c
+set selectbgcolor #434144
+set foundbgcolor #727072
 set currentsearchhitbgcolor #ffd866
 set extdifftool meld
 set perfile_attrs 0
@@ -36,21 +36,21 @@ set headbgcolor #a9dc76
 set headfgcolor black
 set headoutlinecolor #fcfcfa
 set remotebgcolor #ffd866
-set tagbgcolor #5b595c
+set tagbgcolor #727072
 set tagfgcolor black
 set tagoutlinecolor #fcfcfa
 set reflinecolor #fcfcfa
-set filesepbgcolor #403e41
+set filesepbgcolor #434144
 set filesepfgcolor #fcfcfa
-set linehoverbgcolor #5b595c
+set linehoverbgcolor #727072
 set linehoverfgcolor black
 set linehoveroutlinecolor #fcfcfa
 set mainheadcirclecolor #b0e5da
 set workingfilescirclecolor #ff6188
 set indexcirclecolor #a9dc76
-set circlecolors {#221f22 #78dce8 #403e41 #78dce8 #78dce8}
+set circlecolors {#2d2a2e #78dce8 #434144 #78dce8 #78dce8}
 set linkfgcolor #ab9df2
-set circleoutlinecolor #403e41
+set circleoutlinecolor #434144
 set geometry(main) 1920x997+0+24
 set geometry(state) zoomed
 set geometry(topwidth) 1920

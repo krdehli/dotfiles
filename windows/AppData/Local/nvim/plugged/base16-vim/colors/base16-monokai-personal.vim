@@ -15,22 +15,22 @@ if !has("gui_running")
 endif
 
 " GUI color definitions
-let s:gui00        = "221f22"
-let g:base16_gui00 = "221f22"
-let s:gui01        = "2d2a2e"
-let g:base16_gui01 = "2d2a2e"
-let s:gui02        = "403e41"
-let g:base16_gui02 = "403e41"
-let s:gui03        = "5b595c"
-let g:base16_gui03 = "5b595c"
-let s:gui04        = "727072"
-let g:base16_gui04 = "727072"
+let s:gui00        = "2d2a2e"
+let g:base16_gui00 = "2d2a2e"
+let s:gui01        = "403e41"
+let g:base16_gui01 = "403e41"
+let s:gui02        = "434144"
+let g:base16_gui02 = "434144"
+let s:gui03        = "727072"
+let g:base16_gui03 = "727072"
+let s:gui04        = "939293"
+let g:base16_gui04 = "939293"
 let s:gui05        = "fcfcfa"
 let g:base16_gui05 = "fcfcfa"
 let s:gui06        = "f7f7f7"
 let g:base16_gui06 = "f7f7f7"
-let s:gui07        = "f4f4f4"
-let g:base16_gui07 = "f4f4f4"
+let s:gui07        = "565356"
+let g:base16_gui07 = "565356"
 let s:gui08        = "ff6188"
 let g:base16_gui08 = "ff6188"
 let s:gui09        = "fc9867"
@@ -99,7 +99,7 @@ endif
 
 " Neovim terminal colours
 if has("nvim")
-  let g:terminal_color_0 =  "#221f22"
+  let g:terminal_color_0 =  "#2d2a2e"
   let g:terminal_color_1 =  "#ff6188"
   let g:terminal_color_2 =  "#a9dc76"
   let g:terminal_color_3 =  "#ffd866"
@@ -107,14 +107,14 @@ if has("nvim")
   let g:terminal_color_5 =  "#ab9df2"
   let g:terminal_color_6 =  "#b0e5da"
   let g:terminal_color_7 =  "#fcfcfa"
-  let g:terminal_color_8 =  "#5b595c"
+  let g:terminal_color_8 =  "#727072"
   let g:terminal_color_9 =  "#ff6188"
   let g:terminal_color_10 = "#a9dc76"
   let g:terminal_color_11 = "#ffd866"
   let g:terminal_color_12 = "#78dce8"
   let g:terminal_color_13 = "#ab9df2"
   let g:terminal_color_14 = "#b0e5da"
-  let g:terminal_color_15 = "#f4f4f4"
+  let g:terminal_color_15 = "#565356"
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_5
   if &background == "light"
@@ -123,7 +123,7 @@ if has("nvim")
   endif
 elseif has("terminal")
   let g:terminal_ansi_colors = [
-        \ "#221f22",
+        \ "#2d2a2e",
         \ "#ff6188",
         \ "#a9dc76",
         \ "#ffd866",
@@ -131,14 +131,14 @@ elseif has("terminal")
         \ "#ab9df2",
         \ "#b0e5da",
         \ "#fcfcfa",
-        \ "#5b595c",
+        \ "#727072",
         \ "#ff6188",
         \ "#a9dc76",
         \ "#ffd866",
         \ "#78dce8",
         \ "#ab9df2",
         \ "#b0e5da",
-        \ "#f4f4f4",
+        \ "#565356",
         \ ]
 endif
 
