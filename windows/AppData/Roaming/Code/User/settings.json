@@ -277,5 +277,35 @@
     },
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
-    }
+    },
+    "terminal.integrated.defaultProfile.windows": "Developer PowerShell",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Developer PowerShell": {
+            "source": "PowerShell",
+            "args": [
+                "-nol", 
+                "-noe", 
+                "-e", 
+                "JABuAHUAbABsACAAPQAgAEUAbgB0AGUAcgAtAFYAcwBEAGUAdgBTAGgAZQBsAGwAIAAtAFYAcwBJAG4AcwB0AGEAbgBjAGUASQBkACAAKAAmACAAIgAkAHsARQBuAHYAOgBQAHIAbwBnAHIAYQBtAEYAaQBsAGUAcwAoAHgAOAA2ACkAfQBcAE0AaQBjAHIAbwBzAG8AZgB0ACAAVgBpAHMAdQBhAGwAIABTAHQAdQBkAGkAbwBcAEkAbgBzAHQAYQBsAGwAZQByAFwAdgBzAHcAaABlAHIAZQAuAGUAeABlACIAIAAtAGwAYQB0AGUAcwB0ACAALQBwAHIAbwBwAGUAcgB0AHkAIABpAG4AcwB0AGEAbgBjAGUASQBkACkAIAAtAEQAZQB2AEMAbQBkAEEAcgBnAHUAbQBlAG4AdABzACAAJwAtAGEAcgBjAGgAPQB4ADYANAAgAC0AaABvAHMAdABfAGEAcgBjAGgAPQB4ADYANAAnACAALQBTAHQAYQByAHQASQBuAFAAYQB0AGgAIAAkAEUAbgB2ADoAVQBTAEUAUgBQAFIATwBGAEkATABFAA=="
+            ],
+            "icon": "terminal-powershell",
+            "overrideName": true
+        }
+    },
+    "python.pythonPath": "C:\\Program Files\\Python310\\python.exe"
 }
