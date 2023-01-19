@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
-project({{PROJECT_NAME}}
+project({{PROJECT_NAME_SNAKE_CASE}}
 	LANGUAGES CXX
 )
 
@@ -8,22 +8,22 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 
-add_executable({{PROJECT_NAME}}
-	src/{{PROJECT_NAME}}.cpp
+add_executable({{PROJECT_NAME_SNAKE_CASE}}
+	src/{{PROJECT_NAME_SNAKE_CASE}}.cpp
 )
-target_compile_features({{PROJECT_NAME}}
+target_compile_features({{PROJECT_NAME_SNAKE_CASE}}
 	PRIVATE
 		cxx_std_17
 )
-target_include_directories({{PROJECT_NAME}}
+target_include_directories({{PROJECT_NAME_SNAKE_CASE}}
 	PRIVATE
 		include
 )
-target_link_libraries({{PROJECT_NAME}}
+target_link_libraries({{PROJECT_NAME_SNAKE_CASE}}
 	PRIVATE
 		# STUB
 )
-target_compile_options({{PROJECT_NAME}}
+target_compile_options({{PROJECT_NAME_SNAKE_CASE}}
 	PRIVATE
 		$<$<CXX_COMPILER_ID:Clang,AppleClang,GNU>:
 			-Wall

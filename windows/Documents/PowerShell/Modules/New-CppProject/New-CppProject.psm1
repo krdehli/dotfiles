@@ -1,3 +1,43 @@
+function ToSnakeCase([String] $Str) {
+    $Result = $Str.ToLower() -replace '-', '_' -replace '[^a-z0-9_]', ''
+    if ($Result -match '^[^a-z_]') {
+        $Result = 'n' + $Result
+    }
+    return $Result
+}
+
+function ToKebabCase([String] $Str) {
+    $Result = $Str.ToLower() -replace '_', '-' -replace '[^a-z0-9\-]', ''
+    if ($Result -match '^[^a-z\-]') {
+        $Result = 'n' + $Result
+    }
+    return $Result
+}
+
+function ToPascalCase([String] $Str) {
+    $Result = ToSnakeCase($Str)
+    $Result = [regex]::replace($Result, '(?:^|_)(.)', { $args[0].Groups[1].Value.ToUpper() })
+    return $Result
+}
+
+function ToValidDirectoryName([String] $Str) {
+    return $Str -replace '[<>:"/\\|?*]', ''
+}
+
+function ToValidPythonIdentifier([String] $Str) {
+    $Result = $Str -creplace '[^a-zA-Z0-9_]', ''
+    if ($Result -match '^[^a-z_]') {
+        $Result = 'n' + $Result
+    }
+    return $Result
+}
+
+function ToValidVcpkgPackageName([String] $Str) {
+    $Result = $Str -creplace '[^a-z0-9\-]', ''
+    $Result = $Result.Trim('-')
+    return $Result
+}
+
 function New-CppProject {
     [CmdLetBinding(
         PositionalBinding=$false,
@@ -15,7 +55,7 @@ function New-CppProject {
         [ValidateScript({($_ -ne "") -and ($_ -ne $null)})]
         [String] $Author = $Env:FULLNAME,
 
-        [ValidatePattern('\d{4}', ErrorMessage='Year must consist of for digits')] 
+        [ValidatePattern('\d{4}', ErrorMessage='Year must consist of four digits')] 
         [String] $Year = (Get-Date).Year,
 
         [Parameter(ParameterSetName='Predefined')]
@@ -28,7 +68,6 @@ function New-CppProject {
 
         [Switch] $CreateRemote,
 
-        [ValidatePattern('[\da-f]{40}', ErrorMessage='Invalid token format')]
 	    [String] $GithubToken = $Env:GITHUB_TOKEN,
 
         [Switch] $PublicRepo
@@ -53,29 +92,35 @@ function New-CppProject {
 
 
     New-Item ".\" -ItemType 'directory' -Name "$Path" | Out-Null
-    copy "$Template\*" "$Path" -Recurse
+    Copy-Item "$Template\*" "$Path" -Recurse
 
     $Values = @{
         PROJECT_NAME=$(Split-Path $Path -Leaf)
         PROJECT_FRIENDLY_NAME=$FriendlyName
         AUTHOR=$Author
         YEAR=$Year
-        INCLUDE_GUARD=($Path.ToUpper() + '_HPP')
+        INCLUDE_GUARD=($Path.ToUpper() + '_' + ((New-Guid).Guid.ToUpper() -replace '-','_') + '_HPP')
     }
+    $Values['PROJECT_NAME_SNAKE_CASE'] = ToSnakeCase($Values['PROJECT_NAME'])
+    $Values['PROJECT_NAME_PASCAL_CASE'] = ToPascalCase($Values['PROJECT_NAME'])
+    $Values['PROJECT_NAME_KEBAB_CASE'] = ToKebabCase($Values['PROJECT_NAME'])
+    $Values['CONAN_CLASS_NAME'] = ToValidPythonIdentifier($Values['PROJECT_NAME_PASCAL_CASE'])
+    $Values['VCPKG_PACKAGE_NAME'] = ToValidVcpkgPackageName($Values['PROJECT_NAME_KEBAB_CASE'])
+
     $ValuesAsJson = ConvertTo-Json $Values -Compress
 
-    gci "$Path\*" -Include '*{{*}}*' -Recurse | %{
+    Get-ChildItem "$Path\*" -Include '*{{*}}*' -Recurse | ForEach-Object {
         $Key = (Select-String -Pattern '.*\{\{(.*)\}\}.*' -InputObject $_.FullName).Matches.Groups[1]
         Rename-Item $_ ($_.FullName -replace "{{$Key}}", $Values["$Key"])
     }
-    gci "$Path\*" -Include '*.mustache' -Recurse | % {
+    Get-ChildItem "$Path\*" -Include '*.mustache' -Recurse | ForEach-Object {
         Set-Content $_ ($ValuesAsJson | mustache - $_)
         Rename-Item $_ ($_.FullName -replace '\.mustache', '')
     }
     
     $CmakeTemplatePath = "$Env:HOMEDRIVE$Env:HOMEPATH\Documents\VisualStudio\CMakeSettingsTemplates\Standard.json"
     if (Test-Path "$CmakeTemplatePath" -PathType Leaf) {
-        copy "$CmakeTemplatePath" "$Path\CMakeSettings.json" 
+        Copy-Item "$CmakeTemplatePath" "$Path\CMakeSettings.json" 
     }
 
     Push-Location "$Path"
