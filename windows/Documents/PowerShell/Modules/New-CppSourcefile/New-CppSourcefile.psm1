@@ -45,10 +45,6 @@ function New-CppSourcefile {
         [Alias('H')]
         [String] $HeaderDirectory,
 
-        [ValidatePattern('^[a-zA-Z0-9_]+$')]
-        [Alias('T')]
-        [String] $TargetName,
-
         [Switch] $HeaderOnly,
 
         [ValidateScript({ Test-Path -Path $_ -PathType Leaf })]
@@ -105,10 +101,6 @@ function New-CppSourcefile {
         throw "Could not find directory $HeaderDirectory"
     }
 
-    if (-not $TargetName) {
-        $TargetName = (Get-Content -Raw -Path $CMakeLists | Select-String "(?:add_(?:(?:executable)|(?:library))\(\s*)([a-zA-Z0-9_]+)").Matches.Groups[1]
-    }
-
     $SourceFileName = "${Name}.cpp"
     $HeaderFileName = "${Name}.hpp"
     $SourceFilePath = (Join-Path -Path $SourceDirectory -ChildPath $SourceFileName)
@@ -155,25 +147,21 @@ function New-CppSourcefile {
 
     $NewCMakeContent = @()
     $InsideAddTarget = $False
-    $InsideAddSpecifiedTarget = $False
     Get-Content -Path $CMakeLists | ForEach-Object {
         $Line = $_
         if ($Line -match 'add_(?:(?:executable)|(?:library))') {
             $InsideAddTarget = $True
         }
-        if ($InsideAddTarget -and ($Line -match $TargetName)) {
-            $InsideAddSpecifiedTarget = $True
+        if ($InsideAddTarget -and ($Line -match 'INTERFACE')) {
+            $InsideAddTarget = $False
         }
         if ($InsideAddTarget -and ($Line -match '\)')) {
-            if ($InsideAddSpecifiedTarget) {
-                $Line = ($Line -replace '\)', '')
-                $NewCMakeContent += ("`t" + ($RelativeHeaderFilePath -replace '\\','/'))
-                if (-not $HeaderOnly) {
-                    $NewCMakeContent += ("`t" + ($RelativeSourceFilePath -replace '\\','/'))
-                }
-                $NewCMakeContent += ')'
-                $InsideAddSpecifiedTarget = $False
+            $Line = ($Line -replace '\)', '')
+            $NewCMakeContent += ("`t" + ($RelativeHeaderFilePath -replace '\\','/'))
+            if (-not $HeaderOnly) {
+                $NewCMakeContent += ("`t" + ($RelativeSourceFilePath -replace '\\','/'))
             }
+            $NewCMakeContent += ')'
             $InsideAddTarget = $False
         }
         $NewCMakeContent += $Line
