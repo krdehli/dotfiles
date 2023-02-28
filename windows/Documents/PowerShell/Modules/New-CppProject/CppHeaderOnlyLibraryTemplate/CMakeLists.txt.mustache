@@ -1,0 +1,90 @@
+cmake_minimum_required(VERSION 3.21)
+
+project({{PROJECT_NAME_SNAKE_CASE}}
+	VERSION 0.0.1
+	DESCRIPTION "KRSD Dicelib"
+	LANGUAGES CXX
+)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
+include(ExternalProject)
+
+option({{PROJECT_NAME_CAPITAL_SNAKE_CASE}}_BUILD_TESTS "Build unit tests."  ${PROJECT_IS_TOP_LEVEL})
+option({{PROJECT_NAME_CAPITAL_SNAKE_CASE}}_INSTALL "Install CMake targets." ${PROJECT_IS_TOP_LEVEL})
+
+add_library(${PROJECT_NAME} INTERFACE)
+add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
+
+include(GNUInstallDirs)
+
+target_compile_features(${PROJECT_NAME}
+	INTERFACE
+		cxx_std_23
+)
+target_include_directories(${PROJECT_NAME}
+	INTERFACE
+		$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+)
+target_link_libraries(${PROJECT_NAME}
+	INTERFACE
+		# STUB
+)
+
+configure_file(
+	"${CMAKE_CURRENT_SOURCE_DIR}/cmake/pkg-config.pc.in"
+	"${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc"
+)
+
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file(
+	"${PROJECT_NAME}-config-version.cmake"
+	VERSION ${PROJECT_VERSION}
+	COMPATIBILITY SameMajorVersion
+	ARCH_INDEPENDENT
+)
+configure_package_config_file(
+	"${PROJECT_SOURCE_DIR}/cmake/config.cmake.in"
+	"${PROJECT_BINARY_DIR}/${PROJECT_NAME}-config.cmake"
+	INSTALL_DESTINATION "${CMAKE_INSTALL_DATADIR}/cmake/${PROJECT_NAME}"
+)
+
+if({{PROJECT_NAME_CAPITAL_SNAKE_CASE}}_BUILD_TESTS)
+	include(CTest)
+	enable_testing()
+	add_subdirectory(tests)
+endif()
+
+if({{PROJECT_NAME_CAPITAL_SNAKE_CASE}}_INSTALL)
+	install(
+		TARGETS ${PROJECT_NAME} 
+		EXPORT ${PROJECT_NAME}-targets
+		ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+		LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+		RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+	)
+	install(
+		EXPORT ${PROJECT_NAME}-targets
+		FILE ${PROJECT_NAME}-targets.cmake
+		NAMESPACE ${PROJECT_NAME}::
+		DESTINATION "${CMAKE_INSTALL_DATADIR}/cmake/${PROJECT_NAME}"
+	)
+	install(
+		FILES 
+			"${PROJECT_BINARY_DIR}/${PROJECT_NAME}-config.cmake"
+			"${PROJECT_BINARY_DIR}/${PROJECT_NAME}-config-version.cmake"
+		DESTINATION "${CMAKE_INSTALL_DATADIR}/cmake/${PROJECT_NAME}"
+	)
+	install(
+		DIRECTORY "${PROJECT_SOURCE_DIR}/include/krsd"
+		DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
+	)
+	install(
+		FILES "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.pc"
+		DESTINATION "${CMAKE_INSTALL_DATADIR}/pkgconfig"
+	)
+	set(CPACK_RESOURCE_FILE_LICENSE "${PROJECT_SOURCE_DIR}/LICENSE")
+	include(CPack)
+endif()
