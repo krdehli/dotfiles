@@ -59,7 +59,7 @@ function New-CppProject {
         [String] $Year = (Get-Date).Year,
 
         [Parameter(ParameterSetName='Predefined')]
-        [ValidateSet('Default', 'WxWidgets', 'Qt')]
+        [ValidateSet('Default', 'HeaderOnlyLibrary', 'WxWidgets', 'Qt')]
         [String] $Type = 'Default',
 
         [Parameter(ParameterSetName='Custom')]
@@ -74,9 +74,10 @@ function New-CppProject {
     )
 
     $PredefinedTemplates = @{
-        Default   = "$PSScriptRoot\CppProjectTemplate"
-        WxWidgets = "$PSScriptRoot\wxWidgetsProjectTemplate"
-        Qt        = "$PSScriptRoot\QtProjectTemplate"
+        Default           = "$PSScriptRoot\CppProjectTemplate"
+        HeaderOnlyLibrary = "$PSScriptRoot\CppHeaderOnlyLibraryTemplate"
+        WxWidgets         = "$PSScriptRoot\wxWidgetsProjectTemplate"
+        Qt                = "$PSScriptRoot\QtProjectTemplate"
     }
 
     if ($Type) {
@@ -102,8 +103,10 @@ function New-CppProject {
         INCLUDE_GUARD=($Path.ToUpper() + '_' + ((New-Guid).Guid.ToUpper() -replace '-','_') + '_HPP')
     }
     $Values['PROJECT_NAME_SNAKE_CASE'] = ToSnakeCase($Values['PROJECT_NAME'])
+    $Values['PROJECT_NAME_CAPITAL_SNAKE_CASE'] = $Values['PROJECT_NAME_SNAKE_CASE'].ToUpper()
     $Values['PROJECT_NAME_PASCAL_CASE'] = ToPascalCase($Values['PROJECT_NAME'])
     $Values['PROJECT_NAME_KEBAB_CASE'] = ToKebabCase($Values['PROJECT_NAME'])
+    $Values['PROJECT_NAME_CAPTIAL_KEBAB_CASE'] = $Values['PROJECT_NAME_KEBAB_CASE'].ToUpper()
     $Values['CONAN_CLASS_NAME'] = ToValidPythonIdentifier($Values['PROJECT_NAME_PASCAL_CASE'])
     $Values['VCPKG_PACKAGE_NAME'] = ToValidVcpkgPackageName($Values['PROJECT_NAME_KEBAB_CASE'])
 
