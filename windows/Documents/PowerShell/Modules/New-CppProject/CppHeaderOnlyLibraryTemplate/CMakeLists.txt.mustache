@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.25)
 
 project({{PROJECT_NAME_SNAKE_CASE}}
 	VERSION 0.0.1
@@ -50,6 +50,8 @@ configure_package_config_file(
 	"${PROJECT_BINARY_DIR}/${PROJECT_NAME}-config.cmake"
 	INSTALL_DESTINATION "${CMAKE_INSTALL_DATADIR}/cmake/${PROJECT_NAME}"
 )
+
+add_subdirectory(docs)
 
 if({{PROJECT_NAME_CAPITAL_SNAKE_CASE}}_BUILD_TESTS)
 	include(CTest)
