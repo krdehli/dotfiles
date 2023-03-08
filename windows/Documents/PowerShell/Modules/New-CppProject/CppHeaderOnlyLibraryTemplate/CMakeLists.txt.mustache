@@ -8,7 +8,7 @@ project({{PROJECT_NAME_SNAKE_CASE}}
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/modules")
 include(ExternalProject)
 
 option({{PROJECT_NAME_CAPITAL_SNAKE_CASE}}_BUILD_TESTS "Build unit tests."  ${PROJECT_IS_TOP_LEVEL})
