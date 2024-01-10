@@ -2,7 +2,7 @@ function IncludeGuard( [String] $Name, [String] $TargetName = $null, [String] $N
     $Guard = ($Name.ToUpper() + '_HPP_'+ ((New-Guid).Guid.ToUpper() -replace '-','_'))
     
     if ($Namespace -and (-not ($Namespace -eq ''))) {
-        $Guard = (($Namespace.ToUpper() -replace '::','_') + $Guard)
+        $Guard = (($Namespace.ToUpper() -replace '::','_') + '_' + $Guard)
     }
     if($TargetName -and (-not ($TargetName -eq ''))) {
         $Guard = ($TargetName.ToUpper() + '_' + $Guard);
@@ -17,16 +17,23 @@ function New-CppSourcefile {
         [ValidatePattern('^[a-zA-Z0-9_]+$')]
         [String] $Name,
         
-        [Parameter(Mandatory=$True)]
+        [Parameter(Mandatory=$True, ParameterSetName='SourceAndHeader')]
+        [Parameter(Mandatory=$True, ParameterSetName='SourceOnly')]
         [ValidateScript({ Test-Path -Path $_ -PathType Container })]
         [Alias('Source','Src','S')]
         [String] $SourceDirectory,
 
+        [Parameter(Mandatory=$True, ParameterSetName='SourceAndHeader')]
+        [Parameter(Mandatory=$True, ParameterSetName='HeaderOnly')]
         [ValidateScript({ Test-Path -Path $_ -PathType Container })]
         [Alias('H')]
         [String] $HeaderDirectory,
 
+        [Parameter(Mandatory=$True, ParameterSetName='HeaderOnly')]
         [Switch] $HeaderOnly,
+
+        [Parameter(Mandatory=$True, ParameterSetName='SourceOnly')]
+        [Switch] $SourceOnly,
 
         [ValidatePattern('^(?:[a-zA-Z][a-zA-Z0-9_]*)(?:\:\:[a-zA-Z][a-zA-Z0-9_]*)*$')]
         [Alias('N')]
