@@ -1,1 +1,1 @@
-auto main() -> int {}
+#include <catch.hpp>

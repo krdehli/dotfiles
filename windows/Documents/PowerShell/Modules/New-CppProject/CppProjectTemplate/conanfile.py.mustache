@@ -1,11 +1,12 @@
-from conans import ConanFile, CMake
+from conan import ConanFile, CMake
 
 class {{CONAN_CLASS_NAME}}Conan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
-    # requires =
+    requires = [
+        "ms-gsl/[>=4.0.0]", 
+        "fmt/[>=10.2.0]", 
+        "spdlog/[>=1.12.0]"
+    ]
+    test_requires = "catch2/[>=3.5.0]"
     generators = "cmake_paths"
     default_options = {}
-    
-    def imports(self):
-        self.copy("*.dll", dst="bin", src="bin")
-        self.copy("*.dylib", dst="bin", src="lib")

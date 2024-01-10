@@ -1,0 +1,38 @@
+cmake_minimum_required(VERSION 3.27)
+
+find_package(Doxygen
+	OPTIONAL_COMPONENTS dot
+)
+if(DOXYGEN_FOUND)
+    include(FetchContent)
+	FetchContent_Declare(
+		doxygen_awesome
+		URL https://github.com/jothepro/doxygen-awesome-css/archive/refs/tags/v2.2.0.zip
+        DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+	)
+	FetchContent_MakeAvailable(doxygen_awesome)
+
+    include(DoxygenAwesomeFunctions)
+    DoxygenAwesomeFunctions_setup("${doxygen_awesome_SOURCE_DIR}"
+        DOXYGEN_TARGET Doxygen::doxygen
+        SIDEBAR_ONLY
+        DARK_MODE_TOGGLE 
+        FRAGMENT_COPY_BUTTON 
+        PARAGRAPH_LINKING 
+        INTERACTIVE_TOC
+    )
+
+    set(DOXYGEN_GENERATE_HTML YES)
+	set(DOXYGEN_GENERATE_TREEVIEW YES)
+    list(APPEND DOXYGEN_STRIP_FROM_PATH 
+        "${PROJECT_SOURCE_DIR}"
+        "${PROJECT_BINARY_DIR}"
+    )
+    list(APPEND DOXYGEN_STRIP_FROM_INC_PATH
+        "${PROJECT_SOURCE_DIR}/include"
+        "${CMAKE_INSTALL_INCLUDEDIR}"
+    )
+    set(DOXYGEN_BUILTIN_STL_SUPPORT YES)
+
+	doxygen_add_docs(${PROJECT_NAME}_docs "${PROJECT_SOURCE_DIR}/include")
+endif()

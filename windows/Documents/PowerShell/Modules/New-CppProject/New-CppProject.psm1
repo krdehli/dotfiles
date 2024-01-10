@@ -100,7 +100,6 @@ function New-CppProject {
         PROJECT_FRIENDLY_NAME=$FriendlyName
         AUTHOR=$Author
         YEAR=$Year
-        INCLUDE_GUARD=($Path.ToUpper() + '_' + ((New-Guid).Guid.ToUpper() -replace '-','_') + '_HPP')
     }
     $Values['PROJECT_NAME_SNAKE_CASE'] = ToSnakeCase($Values['PROJECT_NAME'])
     $Values['PROJECT_NAME_CAPITAL_SNAKE_CASE'] = $Values['PROJECT_NAME_SNAKE_CASE'].ToUpper()
@@ -109,7 +108,7 @@ function New-CppProject {
     $Values['PROJECT_NAME_CAPTIAL_KEBAB_CASE'] = $Values['PROJECT_NAME_KEBAB_CASE'].ToUpper()
     $Values['CONAN_CLASS_NAME'] = ToValidPythonIdentifier($Values['PROJECT_NAME_PASCAL_CASE'])
     $Values['VCPKG_PACKAGE_NAME'] = ToValidVcpkgPackageName($Values['PROJECT_NAME_KEBAB_CASE'])
-
+    $Values['LIB_HEADER_GUARD'] = $Values['PROJECT_NAME_CAPITAL_SNAKE_CASE'] + '_LIB_HPP_' + ((New-Guid).Guid.ToUpper() -replace '-','_')
     $ValuesAsJson = ConvertTo-Json $Values -Compress
 
     Get-ChildItem "$Path\*" -Include '*{{*}}*' -Recurse | ForEach-Object {
